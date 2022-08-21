@@ -1,21 +1,17 @@
 /** @jsx h */
-import { h } from "preact";
+import { Fragment, h } from "preact";
 import { tw } from "@twind";
-import Counter from "../islands/Counter.tsx";
+import { useEffect } from "preact/hooks";
+import withContainer from "../components/withContainer.tsx";
 
-export default function Home() {
+const Home: preact.FunctionalComponent = () => {
   return (
-    <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <img
-        src="/logo.svg"
-        height="100px"
-        alt="the fresh logo: a sliced lemon dripping with juice"
-      />
+    <Fragment>
       <p class={tw`my-6`}>
-        Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
-        file, and refresh.
+        Jack and Angela are getting married! wow
       </p>
-      <Counter start={3} />
-    </div>
+    </Fragment>
   );
-}
+};
+
+export default withContainer(Home);

@@ -1,0 +1,48 @@
+/** @jsx h */
+import { Fragment, h } from "preact";
+import { tw } from "@twind";
+import withContainer from "../components/withContainer.tsx";
+import { HandlerContext } from "https://deno.land/x/fresh@1.0.2/server.ts";
+
+export const handler = (req: Request, ctx: HandlerContext) => {
+  return ctx.render();
+};
+
+const ToC = () => {
+  return (
+    <div
+      style={{
+        // display: "flex",
+        flex: "1 0 auto",
+        display: "-webkit-flex",
+
+        flexDirection: "column",
+        justifyContent: "space-between",
+        width: "100%",
+      }}
+    >
+      <a
+        href="/playlist"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        🎵 Spotify
+      </a>
+
+      <a
+        href="/registry"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        🎁 Registry
+      </a>
+
+      <a
+        href="/rsvp"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        🆗 RSVP
+      </a>
+    </div>
+  );
+};
+
+export default ToC;

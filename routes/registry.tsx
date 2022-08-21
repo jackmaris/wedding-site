@@ -3,7 +3,7 @@ import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import withContainer from "../components/withContainer.tsx";
 import { useEffect, useState } from "preact/hooks";
-import { getRegistryRows } from "../utils/postgres.ts";
+import { getRegistryRows, getUser } from "../utils/postgres.ts";
 import {
   HandlerContext,
   PageProps,
@@ -32,8 +32,8 @@ const Row = ({ row }: { row: RowData }) => {
 
 export const handler = async (req: Request, ctx: HandlerContext) => {
   if (req.method === "GET") {
-    const rows = await getRegistryRows();
-    return ctx.render({ rows });
+    const [rows, user] = await Promise.all([getRegistryRows(), getUser(req)]);
+    return ctx.render({ user, rows });
   }
 };
 

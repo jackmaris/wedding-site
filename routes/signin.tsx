@@ -30,6 +30,7 @@ export const handler = async (req: Request, ctx: HandlerContext) => {
       maxAge: 3600,
       domain: "deno.dev",
       expires: new Date(Date.UTC(2024, 1, 1, 1, 1)),
+      sameSite: "None",
     });
   }
 

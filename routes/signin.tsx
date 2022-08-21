@@ -28,8 +28,7 @@ export const handler = async (req: Request, ctx: HandlerContext) => {
       value: token,
       secure: true,
       maxAge: 3600,
-      domain: "deno.land",
-      path: "/",
+      domain: "deno.dev",
       expires: new Date(Date.UTC(2024, 1, 1, 1, 1)),
     });
   }

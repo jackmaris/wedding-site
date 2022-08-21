@@ -10,7 +10,7 @@ const withContainer: any = (Component: any) => (props: any) => {
       <Head>
         <style>
           {`
-img:hover {
+img.rotatable:hover {
   -webkit-animation-name: spin;
   -webkit-animation-duration: 1000ms;
   -webkit-animation-iteration-count: infinite;
@@ -65,6 +65,7 @@ img:hover {
         >
           <a href="/" class={tw`mb-1`}>
             <img
+              class={"rotatable"}
               height={70}
               width={70}
               src="/logo.svg"

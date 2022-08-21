@@ -17,8 +17,8 @@ export const handler = async (req: Request, ctx: HandlerContext) => {
   return ctx.render({ user });
 };
 
-const RSVP = (props: PageProps) => {
-  return <div>RSVP!</div>;
+const Food = (props: PageProps) => {
+  return <p>Food!</p>;
 };
 
-export default withContainer(RSVP);
+export default withContainer(Food);

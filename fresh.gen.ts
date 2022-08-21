@@ -4,39 +4,47 @@
 
 import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/session_create.tsx";
-import * as $2 from "./routes/hotel.tsx";
-import * as $3 from "./routes/index.tsx";
-import * as $4 from "./routes/logout.tsx";
-import * as $5 from "./routes/playlist.tsx";
-import * as $6 from "./routes/registry.tsx";
-import * as $7 from "./routes/rsvp.tsx";
-import * as $8 from "./routes/signin.tsx";
-import * as $9 from "./routes/theme.tsx";
-import * as $10 from "./routes/travel.tsx";
+import * as $2 from "./routes/food.tsx";
+import * as $3 from "./routes/hotel.tsx";
+import * as $4 from "./routes/index.tsx";
+import * as $5 from "./routes/itinerary.tsx";
+import * as $6 from "./routes/logout.tsx";
+import * as $7 from "./routes/pictures.tsx";
+import * as $8 from "./routes/playlist.tsx";
+import * as $9 from "./routes/registry.tsx";
+import * as $10 from "./routes/rsvp.tsx";
+import * as $11 from "./routes/signin.tsx";
+import * as $12 from "./routes/theme.tsx";
+import * as $13 from "./routes/travel.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 import * as $$1 from "./islands/Footer.tsx";
 import * as $$2 from "./islands/Profile.tsx";
-import * as $$3 from "./islands/ToC.tsx";
+import * as $$3 from "./islands/RandomPicture.tsx";
+import * as $$4 from "./islands/ToC.tsx";
 
 const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
     "./routes/api/session_create.tsx": $1,
-    "./routes/hotel.tsx": $2,
-    "./routes/index.tsx": $3,
-    "./routes/logout.tsx": $4,
-    "./routes/playlist.tsx": $5,
-    "./routes/registry.tsx": $6,
-    "./routes/rsvp.tsx": $7,
-    "./routes/signin.tsx": $8,
-    "./routes/theme.tsx": $9,
-    "./routes/travel.tsx": $10,
+    "./routes/food.tsx": $2,
+    "./routes/hotel.tsx": $3,
+    "./routes/index.tsx": $4,
+    "./routes/itinerary.tsx": $5,
+    "./routes/logout.tsx": $6,
+    "./routes/pictures.tsx": $7,
+    "./routes/playlist.tsx": $8,
+    "./routes/registry.tsx": $9,
+    "./routes/rsvp.tsx": $10,
+    "./routes/signin.tsx": $11,
+    "./routes/theme.tsx": $12,
+    "./routes/travel.tsx": $13,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
     "./islands/Footer.tsx": $$1,
     "./islands/Profile.tsx": $$2,
-    "./islands/ToC.tsx": $$3,
+    "./islands/RandomPicture.tsx": $$3,
+    "./islands/ToC.tsx": $$4,
   },
   baseUrl: import.meta.url,
 };

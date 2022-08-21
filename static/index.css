@@ -2,7 +2,7 @@ html {
   background-color: #e5e7eb;
 }
 
-img {
+img .rotatable {
   -webkit-animation-name: spin;
   -webkit-animation-duration: 4000ms;
   -webkit-animation-iteration-count: infinite;

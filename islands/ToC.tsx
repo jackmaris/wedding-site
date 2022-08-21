@@ -22,6 +22,12 @@ const ToC = () => {
       }}
     >
       <a
+        href="/itinerary"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        📋 Itinerary
+      </a>
+      <a
         href="/playlist"
         class={tw`no-underline  hover:underline text-blue-700 my-1`}
       >
@@ -61,6 +67,18 @@ const ToC = () => {
         class={tw`no-underline  hover:underline text-blue-700 my-1`}
       >
         🏨 Hotel
+      </a>
+      <a
+        href="/food"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        🥩 Food and Drinks
+      </a>
+      <a
+        href="/pictures"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        📸 Pictures
       </a>
     </div>
   );

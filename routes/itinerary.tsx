@@ -17,8 +17,12 @@ export const handler = async (req: Request, ctx: HandlerContext) => {
   return ctx.render({ user });
 };
 
-const RSVP = (props: PageProps) => {
-  return <div>RSVP!</div>;
+const Itinerary = (props: PageProps<{ session?: string }>) => {
+  return (
+    <h2 class={tw`mb-1`}>
+      Stuff we'll do
+    </h2>
+  );
 };
 
-export default withContainer(RSVP);
+export default withContainer(Itinerary);

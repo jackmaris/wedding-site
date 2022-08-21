@@ -9,6 +9,7 @@ import {
 } from "https://deno.land/x/fresh@1.0.2/server.ts";
 import { getUser } from "../utils/postgres.ts";
 import withContainer from "../components/withContainer.tsx";
+import RandomPicture from "../islands/RandomPicture.tsx";
 
 // deno-lint-ignore require-await
 export const handler = async (req: Request, ctx: HandlerContext) => {
@@ -17,8 +18,12 @@ export const handler = async (req: Request, ctx: HandlerContext) => {
   return ctx.render({ user });
 };
 
-const RSVP = (props: PageProps) => {
-  return <div>RSVP!</div>;
+const Pictures = (props: PageProps) => {
+  return (
+    <div>
+      <RandomPicture />
+    </div>
+  );
 };
 
-export default withContainer(RSVP);
+export default withContainer(Pictures);

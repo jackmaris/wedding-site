@@ -80,6 +80,13 @@ const ToC = () => {
       >
         📸 Pictures
       </a>
+
+      <a
+        href="mailto:jack.maris@gmail.com,sl4525@columbia.edu"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        🥸 Contact Us
+      </a>
     </div>
   );
 };

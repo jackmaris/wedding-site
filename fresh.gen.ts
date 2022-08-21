@@ -4,18 +4,19 @@
 
 import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/session_create.tsx";
-import * as $2 from "./routes/food.tsx";
-import * as $3 from "./routes/hotel.tsx";
-import * as $4 from "./routes/index.tsx";
-import * as $5 from "./routes/itinerary.tsx";
-import * as $6 from "./routes/logout.tsx";
-import * as $7 from "./routes/pictures.tsx";
-import * as $8 from "./routes/playlist.tsx";
-import * as $9 from "./routes/registry.tsx";
-import * as $10 from "./routes/rsvp.tsx";
-import * as $11 from "./routes/signin.tsx";
-import * as $12 from "./routes/theme.tsx";
-import * as $13 from "./routes/travel.tsx";
+import * as $2 from "./routes/contact.tsx";
+import * as $3 from "./routes/food.tsx";
+import * as $4 from "./routes/hotel.tsx";
+import * as $5 from "./routes/index.tsx";
+import * as $6 from "./routes/itinerary.tsx";
+import * as $7 from "./routes/logout.tsx";
+import * as $8 from "./routes/pictures.tsx";
+import * as $9 from "./routes/playlist.tsx";
+import * as $10 from "./routes/registry.tsx";
+import * as $11 from "./routes/rsvp.tsx";
+import * as $12 from "./routes/signin.tsx";
+import * as $13 from "./routes/theme.tsx";
+import * as $14 from "./routes/travel.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 import * as $$1 from "./islands/Footer.tsx";
 import * as $$2 from "./islands/Profile.tsx";
@@ -26,18 +27,19 @@ const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
     "./routes/api/session_create.tsx": $1,
-    "./routes/food.tsx": $2,
-    "./routes/hotel.tsx": $3,
-    "./routes/index.tsx": $4,
-    "./routes/itinerary.tsx": $5,
-    "./routes/logout.tsx": $6,
-    "./routes/pictures.tsx": $7,
-    "./routes/playlist.tsx": $8,
-    "./routes/registry.tsx": $9,
-    "./routes/rsvp.tsx": $10,
-    "./routes/signin.tsx": $11,
-    "./routes/theme.tsx": $12,
-    "./routes/travel.tsx": $13,
+    "./routes/contact.tsx": $2,
+    "./routes/food.tsx": $3,
+    "./routes/hotel.tsx": $4,
+    "./routes/index.tsx": $5,
+    "./routes/itinerary.tsx": $6,
+    "./routes/logout.tsx": $7,
+    "./routes/pictures.tsx": $8,
+    "./routes/playlist.tsx": $9,
+    "./routes/registry.tsx": $10,
+    "./routes/rsvp.tsx": $11,
+    "./routes/signin.tsx": $12,
+    "./routes/theme.tsx": $13,
+    "./routes/travel.tsx": $14,
   },
   islands: {
     "./islands/Counter.tsx": $$0,

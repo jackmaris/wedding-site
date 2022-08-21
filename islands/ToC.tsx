@@ -72,7 +72,7 @@ const ToC = () => {
         href="/food"
         class={tw`no-underline  hover:underline text-blue-700 my-1`}
       >
-        🥩 Food and Drinks
+        🍽 Food and Drinks
       </a>
       <a
         href="/pictures"
@@ -82,7 +82,7 @@ const ToC = () => {
       </a>
 
       <a
-        href="mailto:jack.maris@gmail.com,sl4525@columbia.edu"
+        href="/contact"
         class={tw`no-underline  hover:underline text-blue-700 my-1`}
       >
         🥸 Contact Us

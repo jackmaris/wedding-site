@@ -18,11 +18,18 @@ export const config: Configuration = {
       fontSize: "1.5em",
       fontWeight: "bold",
     },
+    h1: {
+      fontSize: "2em",
+      fontWeight: "bold",
+    },
     a: {
       class: "no-underline hover:underline text-blue-700",
     },
     p: {
       margin: "1em 0 1em 0",
+    },
+    ul: {
+      margin: "0.25em 0 0.25em 0",
     },
   },
 };

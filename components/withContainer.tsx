@@ -11,8 +11,8 @@ const withContainer: any = (Component: any) => (props: any) => {
       >
         <a href="/">
           <img
-            width={70}
-            height={70}
+            height={140}
+            width={140}
             src="/logo.svg"
             alt="Wedding character"
           />

@@ -26,11 +26,8 @@ export const handler = async (req: Request, ctx: HandlerContext) => {
     cookie.setCookie(headers, {
       name: "wedding_session",
       value: token,
-      secure: true,
-      maxAge: 3600,
-      domain: "deno.dev",
-      expires: new Date(Date.UTC(2024, 1, 1, 1, 1)),
-      sameSite: "None",
+      httpOnly: true,
+      expires: new Date(new Date().setFullYear(new Date().getFullYear() + 10)),
     });
   }
 

@@ -1,7 +1,7 @@
 /** @jsx h */
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 const pictures: string[] = [
   "https://lh3.googleusercontent.com/drgopGs3dpSxzDD36r9NH1lAxiYjM3cnaXrM-HV0tDN_oZV2yOLg2U4f1SyNjXnYGpa668ercNrY9J71Qq7s0QWVBLxNaZUqbVpuyh33v5Lj_Aa8eRzUI-NifOLYCFt8s6Fk5eZFhA=w1920-h1080",
@@ -28,32 +28,42 @@ const pictures: string[] = [
 ];
 
 const RandomPicture = () => {
-  const [url, setURL] = useState<string>(
-    pictures[Math.floor(Math.random() * pictures.length)],
-  );
+  const [mostRecentIdxs, setMostRecentIdxs] = useState<number[]>([]);
+
+  const [idx, setIdx] = useState<number>();
+
+  useEffect(() => {
+    const mostRecent = Math.floor(Math.random() * pictures.length);
+    setIdx(mostRecent);
+    setMostRecentIdxs([mostRecent]);
+  }, []);
 
   return (
     <div style={{ textAlign: "center" }}>
       <button
         onClick={() => {
-          let newURL: string;
+          let newIdx: number;
           while (true) {
-            newURL = pictures[Math.floor(Math.random() * pictures.length)];
-            if (newURL !== url) {
+            newIdx = Math.floor(Math.random() * pictures.length);
+            if (!mostRecentIdxs.includes(newIdx)) {
               break;
             }
           }
-          setURL(newURL);
+
+          setMostRecentIdxs([newIdx, ...mostRecentIdxs].slice(0, 4));
+          setIdx(newIdx);
         }}
         style={{ fontWeight: "bold" }}
         class={tw`hover:bg-blue-100 bg-green-300 px-2 rounded-md my-4`}
       >
         get new image
       </button>
-      <img
-        referrerpolicy="no-referrer"
-        src={url}
-      />
+      {idx != null && (
+        <img
+          referrerpolicy="no-referrer"
+          src={pictures[idx]}
+        />
+      )}
     </div>
   );
 };

@@ -13,5 +13,17 @@ export const config: Configuration = {
       gray: colors.coolGray,
     },
   },
+  preflight: {
+    h2: {
+      fontSize: "1.5em",
+      fontWeight: "bold",
+    },
+    a: {
+      class: "no-underline hover:underline text-blue-700",
+    },
+    p: {
+      margin: "1em 0 1em 0",
+    },
+  },
 };
 if (IS_BROWSER) setup(config);

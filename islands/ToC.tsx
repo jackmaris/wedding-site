@@ -41,6 +41,27 @@ const ToC = () => {
       >
         🆗 RSVP
       </a>
+
+      <a
+        href="/travel"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        ✈️ Travel
+      </a>
+
+      <a
+        href="/theme"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        🎨 Theme
+      </a>
+
+      <a
+        href="/hotel"
+        class={tw`no-underline  hover:underline text-blue-700 my-1`}
+      >
+        🏨 Hotel
+      </a>
     </div>
   );
 };

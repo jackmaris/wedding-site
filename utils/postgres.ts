@@ -10,7 +10,7 @@ type RowData = {
 const databaseUrl = Deno.env.get("DATABASE_URL")!;
 
 // Create a database pool with three connections that are lazily established
-const pool = new postgres.Pool(databaseUrl, 3, true);
+const pool = new postgres.Pool(databaseUrl, 10, true);
 
 // Connect to the database
 const connection = await pool.connect();
@@ -20,7 +20,6 @@ export const getRegistryRows = async (): Promise<RowData[]> => {
   select * from registry
   `;
 
-  console.log(`got here!`, rows);
   return rows as RowData[];
 };
 
@@ -44,7 +43,6 @@ export const getUser = async (req: Request) => {
 
   const session = cookies["wedding_session"];
 
-  console.log(`has session`, !!session);
   if (!session) {
     return;
   }
@@ -56,7 +54,6 @@ export const getUser = async (req: Request) => {
 export const getSessionId = async (
   session_token: string,
 ): Promise<UserRow | undefined> => {
-  console.log(`my token`, session_token);
   const { rows } = await connection.queryObject`
     select ss.id as site_id, wu.id as user_id, wu.name, wu.email from site_session ss join wedding_user wu on ss.wedding_user_id = wu.id where ss.id = ${session_token}
   `;

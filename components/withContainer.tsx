@@ -8,6 +8,7 @@ const withContainer: any = (Component: any) => (props: any) => {
   return (
     <div class={tw`bg-blue-400`}>
       <Head>
+        <meta name="theme-color" content="#38bdf8" />
         <style>
           {`
 img.rotatable:hover {

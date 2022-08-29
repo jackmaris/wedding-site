@@ -3,50 +3,54 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/[name].tsx";
-import * as $1 from "./routes/api/session_create.tsx";
-import * as $2 from "./routes/contact.tsx";
-import * as $3 from "./routes/food.tsx";
-import * as $4 from "./routes/hotel.tsx";
-import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/itinerary.tsx";
-import * as $7 from "./routes/logout.tsx";
-import * as $8 from "./routes/pictures.tsx";
-import * as $9 from "./routes/playlist.tsx";
-import * as $10 from "./routes/registry.tsx";
-import * as $11 from "./routes/rsvp.tsx";
-import * as $12 from "./routes/signin.tsx";
-import * as $13 from "./routes/theme.tsx";
-import * as $14 from "./routes/travel.tsx";
+import * as $1 from "./routes/api/register_item.tsx";
+import * as $2 from "./routes/api/session_create.tsx";
+import * as $3 from "./routes/contact.tsx";
+import * as $4 from "./routes/food.tsx";
+import * as $5 from "./routes/hotel.tsx";
+import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/itinerary.tsx";
+import * as $8 from "./routes/logout.tsx";
+import * as $9 from "./routes/pictures.tsx";
+import * as $10 from "./routes/playlist.tsx";
+import * as $11 from "./routes/registry.tsx";
+import * as $12 from "./routes/rsvp.tsx";
+import * as $13 from "./routes/signin.tsx";
+import * as $14 from "./routes/theme.tsx";
+import * as $15 from "./routes/travel.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 import * as $$1 from "./islands/Footer.tsx";
 import * as $$2 from "./islands/Profile.tsx";
 import * as $$3 from "./islands/RandomPicture.tsx";
-import * as $$4 from "./islands/ToC.tsx";
+import * as $$4 from "./islands/RegistryItem.tsx";
+import * as $$5 from "./islands/ToC.tsx";
 
 const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
-    "./routes/api/session_create.tsx": $1,
-    "./routes/contact.tsx": $2,
-    "./routes/food.tsx": $3,
-    "./routes/hotel.tsx": $4,
-    "./routes/index.tsx": $5,
-    "./routes/itinerary.tsx": $6,
-    "./routes/logout.tsx": $7,
-    "./routes/pictures.tsx": $8,
-    "./routes/playlist.tsx": $9,
-    "./routes/registry.tsx": $10,
-    "./routes/rsvp.tsx": $11,
-    "./routes/signin.tsx": $12,
-    "./routes/theme.tsx": $13,
-    "./routes/travel.tsx": $14,
+    "./routes/api/register_item.tsx": $1,
+    "./routes/api/session_create.tsx": $2,
+    "./routes/contact.tsx": $3,
+    "./routes/food.tsx": $4,
+    "./routes/hotel.tsx": $5,
+    "./routes/index.tsx": $6,
+    "./routes/itinerary.tsx": $7,
+    "./routes/logout.tsx": $8,
+    "./routes/pictures.tsx": $9,
+    "./routes/playlist.tsx": $10,
+    "./routes/registry.tsx": $11,
+    "./routes/rsvp.tsx": $12,
+    "./routes/signin.tsx": $13,
+    "./routes/theme.tsx": $14,
+    "./routes/travel.tsx": $15,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
     "./islands/Footer.tsx": $$1,
     "./islands/Profile.tsx": $$2,
     "./islands/RandomPicture.tsx": $$3,
-    "./islands/ToC.tsx": $$4,
+    "./islands/RegistryItem.tsx": $$4,
+    "./islands/ToC.tsx": $$5,
   },
   baseUrl: import.meta.url,
 };

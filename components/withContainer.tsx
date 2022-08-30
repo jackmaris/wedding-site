@@ -54,7 +54,7 @@ img.rotatable:hover {
         </style>
       </Head>
       <div
-        class={tw`p-4 mx-auto max-w-screen-md `}
+        class={tw`p-4 mx-auto max-w-screen-lg `}
         style={{ backgroundColor: "#ddd" }}
       >
         <div

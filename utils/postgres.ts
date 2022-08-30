@@ -1,11 +1,6 @@
 import * as postgres from "https://deno.land/x/postgres@v0.16.1/mod.ts";
 import * as cookie from "https://deno.land/std/http/cookie.ts";
 
-type RowData = {
-  id: string;
-  name: string;
-};
-
 // Get the connection string from the environment variable "DATABASE_URL"
 const databaseUrl = Deno.env.get("DATABASE_URL")!;
 
@@ -13,15 +8,7 @@ const databaseUrl = Deno.env.get("DATABASE_URL")!;
 const pool = new postgres.Pool(databaseUrl, 10, true);
 
 // Connect to the database
-const connection = await pool.connect();
-
-export const getRegistryRows = async (): Promise<RowData[]> => {
-  const { rows } = await connection.queryObject`
-  select * from registry
-  `;
-
-  return rows as RowData[];
-};
+export const connection = await pool.connect();
 
 /**
  create table wedding_user ( id UUID NOT NULL DEFAULT uuid_generate_v4() primary key,  name varchar(100) not null unique, email varchar(100) not null unique);
@@ -32,10 +19,20 @@ export const getRegistryRows = async (): Promise<RowData[]> => {
 
  */
 
-type UserRow = {
-  id: string;
+export type UserRow = {
+  site_id: string;
+  user_id: string;
   name: string;
   email: string;
+};
+
+export type RegistryRow = {
+  id: string;
+  cost: number;
+  link: string;
+  description: string;
+  name: string;
+  wedding_user?: UserRow;
 };
 
 export const getUser = async (req: Request) => {
@@ -72,7 +69,6 @@ export const createSession = async (email: string, name: string) => {
 
   const user = rows[0] as UserRow | undefined;
 
-  console.log(`my id`, user?.id, user?.id[0], typeof user?.id);
   if (!user) {
     return;
   }
@@ -82,7 +78,7 @@ export const createSession = async (email: string, name: string) => {
       values ($1)
       returning id
     `,
-    [user.id],
+    [user.id as any],
   );
 
   return response.rows[0]?.id;

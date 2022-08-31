@@ -6,7 +6,7 @@ import Footer from "../islands/Footer.tsx";
 import { Head } from "https://deno.land/x/fresh@1.0.2/runtime.ts";
 const withContainer: any = (Component: any) => (props: any) => {
   return (
-    <div class={tw`bg-blue-400`}>
+    <div style={{ backgroundColor: "#b1d5ef" }}>
       <Head>
         <meta name="theme-color" content="#38bdf8" />
         <style>

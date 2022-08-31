@@ -14,3 +14,7 @@ instance. And Google Drive for assets, of course.
 **Q: Are there any Easter eggs on the site?**
 
 A: No, of course not. No way. Not a chance.
+
+**Q: Can I submit a pull request?**
+
+A: Be my guest.

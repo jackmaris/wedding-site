@@ -17,7 +17,7 @@ const Playlist = () => {
         style="border-radius:12px"
         src="https://open.spotify.com/embed/playlist/161kMpriC94xmkqbuCfN3V?utm_source=generator"
         width="100%"
-        height="380"
+        height="800"
         frameBorder="0"
         allowFullScreen={"" as any}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

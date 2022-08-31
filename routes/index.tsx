@@ -24,4 +24,13 @@ const Home: preact.FunctionalComponent = () => {
   );
 };
 
-export default withContainer(Home);
+const X = () => {
+  return (
+    <meta
+      http-equiv="Refresh"
+      content="0; url='https://www.zola.com/wedding/jackandangelajanuary14'"
+    />
+  );
+};
+
+export default X;

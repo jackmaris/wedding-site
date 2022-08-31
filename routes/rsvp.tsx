@@ -18,7 +18,18 @@ export const handler = async (req: Request, ctx: HandlerContext) => {
 };
 
 const RSVP = (props: PageProps) => {
-  return <div>RSVP!</div>;
+  return (
+    <div>
+      <img
+        referrerpolicy="no-referrer"
+        src={"https://drive.google.com/uc?export=view&id=1xXAKsuzdSWwCHu1IKx2YBK4AqxPwotS3"}
+      />
+      <img
+        referrerpolicy="no-referrer"
+        src={"https://drive.google.com/uc?export=view&id=1Dv9mq5jSl_S0glrdc4jiCb3eIlcdBpAq"}
+      />
+    </div>
+  );
 };
 
 export default withContainer(RSVP);
